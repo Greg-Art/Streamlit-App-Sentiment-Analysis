@@ -21,17 +21,8 @@ In this project, you can be able to predict your sentiments with these models.
          
          """)
 
-st.subheader("Please select the page you want to explore: ")
-url_1= "http://localhost:8501/Explore"
-url_2 = "http://localhost:8501/MiniLM"
-url_3= "http://localhost:8501/DistilledBert"
+st.write("""
 
+We trained the models on various Twitter D
 
-if st.button("Explore"):
-    webbrowser.open_new_tab(url_1)
-
-if st.button("MiniML"):
-    webbrowser.open_new_tab(url_2)
-
-if st.button("RoBerta"):
-    webbrowser.open_new_tab(url_3)
+""")
