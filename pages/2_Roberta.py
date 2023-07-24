@@ -9,7 +9,7 @@ import pandas as pd
 import re
 from scipy.special import softmax
 from transformers import pipeline
-
+import xformers
 
 ##creating a cache to store my model for efficiency
 @st.cache_data

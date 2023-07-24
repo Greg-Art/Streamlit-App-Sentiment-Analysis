@@ -8,6 +8,7 @@ import pandas as pd
 import re
 from scipy.special import softmax
 from transformers import pipeline
+import xformers
 
 
 st.title("Welcome to the MiniLM Model Page")
