@@ -32,11 +32,11 @@ st.write("""
 
 data= pd.read_csv("datasets/Train.csv")
 
-st.write("A sample of the orginal Dataframe (Train.csv)")
+st.subheader("A sample of the orginal Dataframe (Train.csv)")
 
 st.write(data.head(10))
 
-st.write("A sample of the preprocessed version of the dataset")
+st.subheader("A sample of the preprocessed version of the dataset")
 
 data_clean= pd.read_csv("datasets/clean_copy.csv")
 
