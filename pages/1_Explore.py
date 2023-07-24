@@ -46,7 +46,6 @@ st.plotly_chart(fig)
 data["tweet_length"]= [len(i.split(" ")) for i in data["safe_text"]]
 
 words= data["tweet_length"].value_counts().reset_index()
-words
-fig_2= pe.scatter(data_frame=words, x="tweet_length", y="count", size= "count")
+fig_2= pe.scatter(data_frame=words, x="tweet_length", y="count", size= "count", color= "tweet_length", title= "Tweet Lenghts")
 
 st.plotly_chart(fig_2)

@@ -1,7 +1,7 @@
 import streamlit as st 
 import torch 
 from transformers import AutoTokenizer
-from transformers import AutoModel
+from transformers import AutoModelForSequenceClassification
 from transformers import AutoConfig
 import numpy as np
 import pandas as pd
@@ -9,29 +9,24 @@ import re
 from scipy.special import softmax
 from transformers import pipeline
 
-##path= "./models/MiniLM"
-##tokenizer= AutoTokenizer.from_pretrained("gArthur98/Greg-Sentiment-classifier")
-
-##model= AutoModel.from_pretrained("gArthur98/Greg-Sentiment-classifier")
-
-##model.save_pretrained(path)
-##tokenizer.save_pretrained(path)
-##@st.cache_data
-##def load_model(model_name):
-   ## model= AutoModel.from_pretrained(model_name)
-    ##return model
-
-##@st.cache_data
-##def load_tokenizer(tokenizer_name):
-    ##tokenizer= AutoTokenizer.from_pretrained(tokenizer_name)
-    ##return tokenizer
-
-##model= load_model("gArthur98/Greg-Sentiment-classifier")
-
-###tokenizer= load_tokenizer("gArthur98/Greg-Sentiment-classifier")
-
 
 st.title("Welcome to the MiniLM Model Page")
+
+
+@st.cache_data
+def load_model(model_name):
+    model= AutoModelForSequenceClassification.from_pretrained(model_name)
+    return model
+
+##creating my model
+ml_model= load_model("gArthur98/Greg-Sentiment-classifier")
+
+@st.cache_data
+def load_tokenizer(tokenizer_name):
+    tokenizer= AutoTokenizer.from_pretrained(tokenizer_name)
+    return tokenizer
+
+ml_token= load_tokenizer("gArthur98/Greg-Sentiment-classifier") 
 
 ##front end 
 
@@ -53,7 +48,7 @@ def data_cleaner(text):
 
 input= data_cleaner(text)
 
-pipe= pipeline("text-classification", model="gArthur98/Greg-Sentiment-classifier", tokenizer="gArthur98/Greg-Sentiment-classifier")
+pipe= pipeline("text-classification", model=ml_model, tokenizer=ml_token)
 
 result= pipe(input)
 

@@ -2,7 +2,7 @@
 import streamlit as st 
 import torch 
 from transformers import AutoTokenizer
-from transformers import AutoModel
+from transformers import AutoModelForSequenceClassification
 from transformers import AutoConfig
 import numpy as np
 import pandas as pd
@@ -10,31 +10,23 @@ import re
 from scipy.special import softmax
 from transformers import pipeline
 
-##creating a directory
 
-##directory= "./models/Roberta"
-##model= AutoModel.from_pretrained("gArthur98/Roberta-Sentiment-classifier")
-##tokenizer= AutoTokenizer.from_pretrained("gArthur98/Roberta-Sentiment-classifier")
+##creating a cache to store my model for efficiency
+@st.cache_data
+def load_model(model_name):
+    model= AutoModelForSequenceClassification.from_pretrained(model_name)
+    return model
 
-##model.save_pretrained(directory)
-##tokenizer.save_pretrained(directory)
+##creating my model
+ro_model= load_model("gArthur98/Roberta-Sentiment-classifier")
 
-##tokenizer= AutoTokenizer.from_pretrained(directory)
-##model= AutoModel.from_pretrained(directory)
+@st.cache_data
+def load_tokenizer(tokenizer_name):
+    tokenizer= AutoTokenizer.from_pretrained(tokenizer_name)
+    return tokenizer
 
-##@st.cache_data
-##def load_model(model_name):
-    ##model= AutoModel.from_pretrained(model_name)
-    ##return model
+ro_token= load_tokenizer("gArthur98/Roberta-Sentiment-classifier") 
 
-##@st.cache_data
-##def load_tokenizer(tokenizer_name):
-   ## tokenizer= AutoTokenizer.from_pretrained(tokenizer_name)
-    ##return tokenizer
-
-##model= load_model("gArthur98/Roberta-Sentiment-classifier")
-
-##tokenizer= load_tokenizer("gArthur98/Roberta-Sentiment-classifier")
 ##front end 
 
 st.title("Welcome to the RoBerta Model Page")
@@ -58,7 +50,7 @@ def data_cleaner(text):
 
 input= data_cleaner(text)
 
-pipe= pipeline("sentiment-analysis", model="gArthur98/Roberta-Sentiment-classifier", tokenizer="gArthur98/Roberta-Sentiment-classifier")
+pipe= pipeline("sentiment-analysis", model=ro_model, tokenizer=ro_token)
 
 result= pipe(input)
 
