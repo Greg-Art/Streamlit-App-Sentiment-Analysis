@@ -9,16 +9,26 @@ import re
 from scipy.special import softmax
 from transformers import pipeline
 
-path= "./models/MiniLM"
+##path= "./models/MiniLM"
 ##tokenizer= AutoTokenizer.from_pretrained("gArthur98/Greg-Sentiment-classifier")
 
 ##model= AutoModel.from_pretrained("gArthur98/Greg-Sentiment-classifier")
 
 ##model.save_pretrained(path)
 ##tokenizer.save_pretrained(path)
+"""@st.cache_data
+def load_model(model_name):
+    model= AutoModel.from_pretrained(model_name)
+    return model"""
 
-model= AutoModel.from_pretrained(path)
-tokenizer= AutoTokenizer.from_pretrained(path)
+"""@st.cache_data
+def load_tokenizer(tokenizer_name):
+    tokenizer= AutoTokenizer.from_pretrained(tokenizer_name)
+    return tokenizer"""
+
+##model= load_model("gArthur98/Greg-Sentiment-classifier")
+
+###tokenizer= load_tokenizer("gArthur98/Greg-Sentiment-classifier")
 
 
 st.title("Welcome to the MiniLM Model Page")
@@ -36,14 +46,14 @@ def data_cleaner(text):
   ##removing punctuations
     text= re.sub("[^\w\s]", repl= "", string=text)
     text= re.sub(r'\d+', '', text)
-    text= " ".join([word for word in text.split() if not word.isdigit()])
+    text= " ".join([word for word in text.split() if not word.isdigit()]) ##removing digits
     return text
 
 ##running my input through my function
 
 input= data_cleaner(text)
 
-pipe= pipeline("text-classification", model=path, tokenizer=path)
+pipe= pipeline("text-classification", model="gArthur98/Greg-Sentiment-classifier", tokenizer="gArthur98/Greg-Sentiment-classifier")
 
 result= pipe(input)
 
@@ -57,6 +67,3 @@ if final:
            st.write(f"Your sentiment is Neutral with a confidence score of {results['score']}")
         else:
            st.write(f"Your sentiment is Positive with a confidence score of {results['score']}")
-
-
-

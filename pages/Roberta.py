@@ -15,16 +15,29 @@ from transformers import pipeline
 
 ##creating a directory
 
-directory= "./models/Roberta"
+##directory= "./models/Roberta"
 ##model= AutoModel.from_pretrained("gArthur98/Roberta-Sentiment-classifier")
 ##tokenizer= AutoTokenizer.from_pretrained("gArthur98/Roberta-Sentiment-classifier")
 
 ##model.save_pretrained(directory)
 ##tokenizer.save_pretrained(directory)
 
-tokenizer= AutoTokenizer.from_pretrained(directory)
-model= AutoModel.from_pretrained(directory)
+##tokenizer= AutoTokenizer.from_pretrained(directory)
+##model= AutoModel.from_pretrained(directory)
 
+"""@st.cache_data
+def load_model(model_name):
+    model= AutoModel.from_pretrained(model_name)
+    return model"""
+
+"""@st.cache_data
+def load_tokenizer(tokenizer_name):
+    tokenizer= AutoTokenizer.from_pretrained(tokenizer_name)
+    return tokenizer"""
+
+##model= load_model("gArthur98/Roberta-Sentiment-classifier")
+
+##tokenizer= load_tokenizer("gArthur98/Roberta-Sentiment-classifier")
 ##front end 
 
 text= st.text_input("Please Enter Your Sentence Below: ")
@@ -45,7 +58,7 @@ def data_cleaner(text):
 
 input= data_cleaner(text)
 
-pipe= pipeline("sentiment-analysis", model=directory, tokenizer=directory)
+pipe= pipeline("sentiment-analysis", model="gArthur98/Roberta-Sentiment-classifier", tokenizer="gArthur98/Roberta-Sentiment-classifier")
 
 result= pipe(input)
 
