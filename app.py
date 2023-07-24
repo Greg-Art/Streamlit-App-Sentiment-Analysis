@@ -34,7 +34,7 @@ data= pd.read_csv("datasets/Train.csv")
 
 st.subheader("A sample of the orginal Dataframe (Train.csv)")
 
-st.write(data.head(10))
+st.write(data.head())
 
 st.subheader("A sample of the preprocessed dataset")
 
