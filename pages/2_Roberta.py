@@ -18,14 +18,14 @@ def load_model(model_name):
     return model
 
 ##creating my model
-ro_model= load_model("gArthur98/Roberta-Sentiment-classifier")
+ro_model= load_model("gArthur98/Roberta-classweight-Sentiment-classifier")
 
 @st.cache_data
 def load_tokenizer(tokenizer_name):
     tokenizer= AutoTokenizer.from_pretrained(tokenizer_name)
     return tokenizer
 
-ro_token= load_tokenizer("gArthur98/Roberta-Sentiment-classifier") 
+ro_token= load_tokenizer("gArthur98/Roberta-classweight-Sentiment-classifier") 
 
 ##front end 
 
