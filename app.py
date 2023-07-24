@@ -40,4 +40,6 @@ st.subheader("A sample of the preprocessed dataset")
 
 data_clean= pd.read_csv("datasets/clean_copy.csv")
 
+data_clean= data_clean.drop("Unnamed: 0", axis= 1)
+
 st.write(data_clean.head())
