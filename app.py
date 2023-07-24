@@ -16,16 +16,17 @@ The objective of this challenge is to develop a machine learning model to assess
 
 st.subheader("""Variable definition:""")
 
-st.write(""""
-tweet_id: Unique identifier of the tweet
+st.write("""
 
-safe_tweet: Text contained in the tweet. Some sensitive information has been removed like usernames and urls
+    **tweet_id**: Unique identifier of the tweet
 
-label: Sentiment of the tweet (-1 for negative, 0 for neutral, 1 for positive)
+**safe_tweet**: Text contained in the tweet. Some sensitive information has been removed like usernames and urls
 
-agreement: The tweets were labeled by three people. Agreement indicates the percentage of the three reviewers that agreed on the given label. You may use this column in your training, but agreement data will not be shared for the test set.
+**label**: Sentiment of the tweet (-1 for negative, 0 for neutral, 1 for positive)
 
-Train.csv - Labelled tweets on which to train your model
+**agreement**: The tweets were labeled by three people. Agreement indicates the percentage of the three reviewers that agreed on the given label. You may use this column in your training, but agreement data will not be shared for the test set.
+
+**Train.csv**:  Labelled tweets on which to train your model
              
          """)
 
