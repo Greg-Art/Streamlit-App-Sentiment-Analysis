@@ -11,7 +11,9 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 
 
 
-st.title("Welcome! On This Page, you will be able to see the various visuals used for our EDA")
+st.title("Welcome! On The Explore Page")
+
+st.markdown("On this page you will be able to some EDA Visuals")
 
 ##loading my dataset 
 
