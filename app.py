@@ -11,14 +11,10 @@ st.sidebar.success("select a model to use")
 
 st.title("Welcome to my Sentiment Analysis App")
 
-st.markdown("""This project was done by Group Seville and it encapsulates two sentiment analysis models: \n
-         
-- Roberta Base 
+st.markdown("""This project was done by Gregory Arthur, a budding data scientist from Ghana. On this page, you will 
+be able to classify Covid-19 sentiments with the Roberta Base model
 
-- MiniLM
-            
-In this project, you can be able to predict your sentiments with these models. 
-         
+             
          """)
 
 st.write("""
