@@ -23,6 +23,6 @@ In this project, you can be able to predict your sentiments with these models.
 
 st.write("""
 
-We trained the models on various Twitter D
+We trained the models on a dataset which contain dirty data which we run
 
 """)
