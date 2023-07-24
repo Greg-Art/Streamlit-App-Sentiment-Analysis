@@ -14,7 +14,7 @@ st.title("Welcome to my Sentiment Analysis App")
 st.markdown("""On this app, you will  be able to classify Covid-19 sentiments with the Roberta Base model
 The objective of this challenge is to develop a machine learning model to assess if a twitter post that is related to vaccinations is positive, neutral, or negative.""")
 
-st.subtitle("""Variable definition:""")
+st.subheader("""Variable definition:""")
 
 st.write(""""
 tweet_id: Unique identifier of the tweet
