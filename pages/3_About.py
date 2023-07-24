@@ -3,7 +3,7 @@ from st_functions import st_button, load_css
 from PIL import Image
 import sys
 
-sys.path.append('/pages') ##appending my src path so that I can import a function from another py file
+sys.path.append('./') ##appending my root path so that I can import a function from another py file
 
 st.title("Learn More About Me:") ## my title 
 
