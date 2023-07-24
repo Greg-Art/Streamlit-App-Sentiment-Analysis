@@ -16,15 +16,15 @@ from transformers import pipeline
 
 ##model.save_pretrained(path)
 ##tokenizer.save_pretrained(path)
-"""@st.cache_data
-def load_model(model_name):
-    model= AutoModel.from_pretrained(model_name)
-    return model"""
+##@st.cache_data
+##def load_model(model_name):
+   ## model= AutoModel.from_pretrained(model_name)
+    ##return model
 
-"""@st.cache_data
-def load_tokenizer(tokenizer_name):
-    tokenizer= AutoTokenizer.from_pretrained(tokenizer_name)
-    return tokenizer"""
+##@st.cache_data
+##def load_tokenizer(tokenizer_name):
+    ##tokenizer= AutoTokenizer.from_pretrained(tokenizer_name)
+    ##return tokenizer
 
 ##model= load_model("gArthur98/Greg-Sentiment-classifier")
 
