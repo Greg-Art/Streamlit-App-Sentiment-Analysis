@@ -46,11 +46,11 @@ def data_cleaner(text):
 
 ##running my input through my function
 
-input= data_cleaner(text)
+input_text= data_cleaner(text)
 
 pipe= pipeline("text-classification", model=ml_model, tokenizer=ml_token)
 
-result= pipe(input)
+result= pipe(input_text)
 
 final = st.button("Calculate Sentiment")
 
