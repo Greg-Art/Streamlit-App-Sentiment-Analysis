@@ -1,18 +1,20 @@
-# Creating a Web App for my Classification Model 
+# Embedding a Pre-Trained Model Into A GUI
 
-## Project Description
+## Project Description 🧐
 
 
-The aim of this project was to fine-tune and deploy a pre-trained model.  
+The objective of this challenge is to fine tune a pre-trained model to assess if a Twitter post is about COVID-19 or not. This model will help gather tweet data about the epidemic without relying only on key words like ‘covid’ or ‘coronavirus’ being present, allowing researchers and engineers to gather a more comprehensive dataset for sentiment analysis.
 
-## Navigating Through the directories
+This model could be put into practice as part of a larger effort to understand online sentiment around COVID-19, and inform future communications and public interventions by governments and non-government public health organisations.
+
+## Navigating Through the directories 📖
 
 - The dataset directory contains all the datasets (CSV files) needed for this project
 - The notebook directory contains all the codes I run for my EDA and finetuning
 - The pages directory contains all my subpages for the app 
 
 
-## Installation
+## Installation 🛠
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the requirements.txt file. 
 
@@ -20,16 +22,16 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the req
 pip install -r requirements.txt
 ```
 
-## Usage
+## Usage 👍🏾
 
-```python
+```powershell
 
-streamlit run app.py
+Streamlit run app.py
 
 
 ```
 
-## Contributing
+## Contributing 🤝🏾
 
 Pull requests are welcome. For major changes, please open an issue first
 to discuss what you would like to change.
@@ -38,7 +40,7 @@ Please make sure to update tests as appropriate. Contact me via my email: gregor
 
 
 
-## Summary
+## Summary 💬
 | Code      | Name        | Published Article |  Deployed App |
 |-----------|-------------|:-------------:|------:|
 | LP5 | Sentiment Analysis |  [Article to project](https://gregoryarthur98.medium.com/leveraging-pre-trained-models-to-predict-twitter-sentiments-c191b5da61a5) | [Deployed App](https://sentiment-analysis-hft7l62e9r.streamlit.app/) |
