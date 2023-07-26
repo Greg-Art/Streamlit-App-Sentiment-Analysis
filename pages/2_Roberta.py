@@ -10,6 +10,11 @@ import re
 from scipy.special import softmax
 from transformers import pipeline
 import xformers
+import requests
+import json
+
+from streamlit_lottie import st_lottie 
+
 
 import streamlit as st
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
@@ -29,19 +34,19 @@ def load_tokenizer(tokenizer_name):
     return tokenizer
 
 ## Front end
-st.title("Welcome to the RoBerta Model Page")
+st.title("Welcome to the Fine-Tuned RoBerta Sentiment Classification Model Page")
 
 ##including an animation to my page 
 
 @st.cache_data ##adding a cache
-def load_lottiefile(url: str):
-    r= requests.get(url)
-    if r.status_code !=200:
-        return None
-    return r.json()
+def load_lottiefile(filepath: str):
+    with open(filepath, "r") as f:
+        return json.load(f)
+   
 
-lottie_hello= load_lottiefile("https://lottiefiles.com/animations/emotion-changing-r9Czntl1Ic")
+lottie_hello= load_lottiefile("./lottie_animations/roberta.json")
 
+st_lottie(lottie_hello, height= 200)
 
 text = st.text_input("Please Enter Your Sentence Below: ")
 
