@@ -7,6 +7,11 @@ The objective of this challenge is to fine tune a pre-trained model to assess if
 
 This model could be put into practice as part of a larger effort to understand online sentiment around COVID-19, and inform future communications and public interventions by governments and non-government public health organisations.
 
+## App in Action 😎
+
+https://github.com/Greg-Art/Streamlit-App-Sentiment-Analysis/assets/126587191/48030828-2527-4409-9b0d-f0de2cae3784
+
+
 ## Navigating Through the directories 📖
 
 - The dataset directory contains all the datasets (CSV files) needed for this project
