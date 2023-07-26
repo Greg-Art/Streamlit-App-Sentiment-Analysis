@@ -50,13 +50,7 @@ st_lottie(lottie_hello, height= 200) ##loading my gif
 
 text = st.text_input("Please Enter a Covid-19 Themed Sentence Below: ")
 
-st.write("""Example of sentences to input:
-         
-         - I hate the vaccine \n
-    - I love the vaccine \n
-    - Covid-19 is Moving Fast
-    
-         """)
+
 
 ## Cleaning
 def data_cleaner(text):
@@ -96,3 +90,10 @@ if final:
 
 
 
+st.write("""Example of sentences to input:
+         
+         - I hate the vaccine \n
+    - I love the vaccine \n
+    - Covid-19 is Moving Fast
+    
+         """)
