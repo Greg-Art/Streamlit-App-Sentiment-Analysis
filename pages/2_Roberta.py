@@ -31,6 +31,18 @@ def load_tokenizer(tokenizer_name):
 ## Front end
 st.title("Welcome to the RoBerta Model Page")
 
+##including an animation to my page 
+
+@st.cache_data ##adding a cache
+def load_lottiefile(url: str):
+    r= requests.get(url)
+    if r.status_code !=200:
+        return None
+    return r.json()
+
+lottie_hello= load_lottiefile("https://lottiefiles.com/animations/emotion-changing-r9Czntl1Ic")
+
+
 text = st.text_input("Please Enter Your Sentence Below: ")
 
 ## Cleaning
