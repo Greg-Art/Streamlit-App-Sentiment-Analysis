@@ -44,11 +44,19 @@ def load_lottiefile(filepath: str):
         return json.load(f)
    
 
-lottie_hello= load_lottiefile("./lottie_animations/roberta.json")
+lottie_hello= load_lottiefile("./lottie_animations/roberta.json") ##uploading my gif
 
-st_lottie(lottie_hello, height= 200)
+st_lottie(lottie_hello, height= 200) ##loading my gif
 
-text = st.text_input("Please Enter Your Sentence Below: ")
+text = st.text_input("Please Enter a Covid-19 Themed Sentence Below: ")
+
+st.write("""Example of sentences /n
+         
+         - I hate the vaccine /n
+         - I love the vaccine /n
+         - Covid-19 is Moving Fast
+    
+         """)
 
 ## Cleaning
 def data_cleaner(text):
