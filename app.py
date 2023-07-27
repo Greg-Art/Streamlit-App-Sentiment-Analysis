@@ -14,19 +14,6 @@ st.sidebar.success("select a model to use")
 
 st.title("Welcome to my Sentiment Analysis App")
 
-##including an animation to my page
-
-@st.cache_data ##adding a cache
-def load_lottiefile(filepath: str):
-    with open(filepath, "r") as f:
-        return json.load(f)
-   
-
-lottie_hello= load_lottiefile("./lottie_animations/main.json")
-
-##setting my title
-
-st_lottie(lottie_hello, height= 200) ##inserting my animation
 
 st.markdown("""On this app, you will  be able to classify Covid-19 sentiments with the Roberta Base model
 The objective of this challenge is to develop a machine learning model to assess if a twitter post that is related to vaccinations is positive, neutral, or negative.""")
