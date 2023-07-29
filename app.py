@@ -48,6 +48,10 @@ st.write("""
 **agreement**: The tweets were labeled by three people. Agreement indicates the percentage of the three reviewers that agreed on the given label. You may use this column in your training, but agreement data will not be shared for the test set.
 
 **Train.csv**:  Labelled tweets on which to train your model
+         
+The Models I fine-tuned include: \n
+- Roberta: Achieving an f1 score of 0.64 \n 
+- Distilled Bert: Achieving an f1-score of 0.71
              
          """)
 
