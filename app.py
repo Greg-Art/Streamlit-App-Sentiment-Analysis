@@ -10,7 +10,7 @@ from streamlit_lottie import st_lottie
 st.set_page_config(page_title= "Welcome Page", page_icon ="👋")
 
 
-st.sidebar.success("select a model to use")
+st.sidebar.success("Select The Page You Want to Explore: ")
 
 st.title("Welcome to my Sentiment Analysis App")
 
@@ -22,7 +22,7 @@ def load_lottiefile(filepath: str):
 if 'lottie_hello' not in st.session_state:
     st.session_state.lottie_hello = load_lottiefile("./lottie_animations/main.json")
 
-# creating a funciton to upload the file 
+# creating a funciton to upload the file while implementing session state
 def handle_uploaded_file(uploaded_file):
     if uploaded_file is not None:
         st.session_state.lottie_hello = load_lottiefile(uploaded_file.name)
