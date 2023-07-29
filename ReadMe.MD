@@ -9,7 +9,7 @@ This model could be put into practice as part of a larger effort to understand o
 
 ## App in Action 😎
 
-https://github.com/Greg-Art/Streamlit-App-Sentiment-Analysis/assets/126587191/48030828-2527-4409-9b0d-f0de2cae3784
+https://github.com/Greg-Art/Streamlit-App-Sentiment-Analysis/assets/126587191/20ca9a43-fa85-4a22-9a36-7f8342541ba6
 
 
 ## Navigating Through the directories 📖
@@ -48,7 +48,7 @@ Please make sure to update tests as appropriate. Contact me via my email: gregor
 ## Summary 💬
 | Code      | Name        | Published Article |  Deployed App |
 |-----------|-------------|:-------------:|------:|
-| LP5 | Sentiment Analysis |  [Article to project](https://gregoryarthur98.medium.com/leveraging-pre-trained-models-to-predict-twitter-sentiments-c191b5da61a5) | [Deployed App](https://sentiment-analysis-hft7l62e9r.streamlit.app/DistilledBert) |
+| LP5 | Sentiment Analysis |  [Article to project](https://gregoryarthur98.medium.com/leveraging-pre-trained-models-to-predict-twitter-sentiments-c191b5da61a5) | [Deployed App](https://sentiment-analysis-hft7l62e9r.streamlit.app/) |
 
 
 
