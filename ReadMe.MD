@@ -9,7 +9,7 @@ This model could be put into practice as part of a larger effort to understand o
 
 ## App in Action 😎
 
-https://github.com/Greg-Art/Streamlit-App-Sentiment-Analysis/assets/126587191/48030828-2527-4409-9b0d-f0de2cae3784
+https://github.com/Greg-Art/Streamlit-App-Sentiment-Analysis/assets/126587191/20ca9a43-fa85-4a22-9a36-7f8342541ba6
 
 
 ## Navigating Through the directories 📖
