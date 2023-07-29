@@ -34,19 +34,26 @@ def load_tokenizer(tokenizer_name):
     return tokenizer
 
 ## Front end
-st.title("Welcome to the Fine-Tuned RoBerta Sentiment Classification Model Page")
+st.title("Welcome to the Fine-Tuned DisTilled-Bert Sentiment Classifier  Page")
 
 ##including an animation to my page 
 
-@st.cache_data ##adding a cache
 def load_lottiefile(filepath: str):
     with open(filepath, "r") as f:
         return json.load(f)
-   
 
-lottie_hello= load_lottiefile("./lottie_animations/roberta.json") ##uploading my gif
+# initializaing my session state 
+if 'lottie_hello_2' not in st.session_state:
+    st.session_state.lottie_hello_2 = load_lottiefile("./lottie_animations/dsbert.json")
 
-st_lottie(lottie_hello, height= 200) ##loading my gif
+# creating a funciton to upload the file while implementing session state
+def handle_uploaded_file(uploaded_file):
+    if uploaded_file is not None:
+        st.session_state.lottie_hello_2 = load_lottiefile(uploaded_file.name)
+
+
+# displaying the Lottie animation
+st_lottie(st.session_state.lottie_hello_2, height=200)
 
 text = st.text_input("Please Enter a Covid-19 Themed Sentence Below: ")
 
@@ -67,10 +74,10 @@ def data_cleaner(text):
 text_input = data_cleaner(text)
 
 if 'ro_model' not in st.session_state:
-    st.session_state.ro_model = load_model("gArthur98/Roberta-classweight-Sentiment-classifier")
+    st.session_state.ro_model = load_model("gArthur98/Greg-DistilBert-classifier")
 
 if 'ro_token' not in st.session_state:
-    st.session_state.ro_token = load_tokenizer("gArthur98/Roberta-classweight-Sentiment-classifier")
+    st.session_state.ro_token = load_tokenizer("gArthur98/Greg-DistilBert-classifier")
 
 pipe = pipeline("sentiment-analysis", model=st.session_state.ro_model, tokenizer=st.session_state.ro_token)
 
@@ -92,7 +99,7 @@ if final:
 
 st.write("""Example of sentences to input:
          
-         - I hate the vaccine \n
+         - The New Vaccine is Bad \n
     - I love the vaccine \n
     - Covid-19 is Moving Fast
     
