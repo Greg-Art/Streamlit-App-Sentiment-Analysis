@@ -3,7 +3,7 @@
 ## Project Description 🧐
 
 
-The objective of this challenge is to fine tune a pre-trained model to assess if a Twitter post is about COVID-19 or not. This model will help gather tweet data about the epidemic without relying only on key words like ‘covid’ or ‘coronavirus’ being present, allowing researchers and engineers to gather a more comprehensive dataset for sentiment analysis.
+The objective of this challenge is to fine-tune a pre-trained model to assess if a Twitter post is about COVID-19 or not. This model will help gather tweet data about the epidemic without relying only on keywords like ‘covid’ or ‘coronavirus’ being present, allowing researchers and engineers to pick a more comprehensive dataset for sentiment analysis.
 
 This model could be put into practice as part of a larger effort to understand online sentiment around COVID-19, and inform future communications and public interventions by governments and non-government public health organisations.
 
