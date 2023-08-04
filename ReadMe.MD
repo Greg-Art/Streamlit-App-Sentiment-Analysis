@@ -48,7 +48,7 @@ Please make sure to update tests as appropriate. Contact me via my email: gregor
 ## Summary 💬
 | Code      | Name        | Published Article |  Deployed App |
 |-----------|-------------|:-------------:|------:|
-| LP5 | Sentiment Analysis |  [Article to project](https://gregoryarthur98.medium.com/leveraging-pre-trained-models-to-predict-twitter-sentiments-c191b5da61a5) | [Deployed App](https://sentiment-analysis-hft7l62e9r.streamlit.app/) |
+| LP5 | Sentiment Analysis |  [Article to project](https://gregoryarthur98.medium.com/leveraging-pre-trained-models-to-predict-twitter-sentiments-c191b5da61a5) | [Deployed App](https://huggingface.co/spaces/gArthur98/distill_sentiment_classifier) |
 
 
 
